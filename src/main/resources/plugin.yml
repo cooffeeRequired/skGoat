@@ -1,0 +1,9 @@
+name: Skgoat
+version: '${version}'
+main: cz.coffee.Skgoat
+api-version: 1.19
+prefix: skGoat
+depend: [ Skript ]
+authors: [ CoffeRequired ]
+description: Addon that fills in missing syntax, and improves working with inventories
+website: https://github.com/cooffeeRequired/skGoat
