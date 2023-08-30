@@ -3,7 +3,6 @@ package cz.coffee.skript;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.registrations.EventValues;
 import ch.njol.skript.util.Getter;
-import cz.coffee.skript.interactiveGui.events.BaseEventGUI;
 import io.papermc.paper.event.block.BlockBreakBlockEvent;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -36,35 +35,21 @@ public class EvtValues {
                     public ItemStack get(InventoryDragEvent event) {
                         return event.getOldCursor();
                     }
-                }, 0
-        );
-
+                }, 0);
         EventValues.registerEventValue(BlockBreakBlockEvent.class, Block.class,
                 new Getter<>() {
                     @Override
                     public Block get(BlockBreakBlockEvent event) {
                         return event.getBlock();
                     }
-                }, 0
-        );
-
+                }, 0);
         EventValues.registerEventValue(BlockBreakBlockEvent.class, Block.class,
                 new Getter<>() {
                     @Override
                     public Block get(BlockBreakBlockEvent event) {
                         return event.getBlock();
                     }
-                }, 0
-        );
-
-        EventValues.registerEventValue(BaseEventGUI.class, Inventory.class,
-                new Getter<>() {
-                    @Override
-                    public Inventory get(BaseEventGUI event) {
-                        return event.getInventory();
-                    }
-                }, 0
-        );
+                }, 0);
     }
 
 }

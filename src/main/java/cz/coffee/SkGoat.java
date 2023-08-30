@@ -1,29 +1,8 @@
-/**
- * This file is part of skGoat.
- * <p>
- * Skript is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * <p>
- * Skript is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * <p>
- * You should have received a copy of the GNU General Public License
- * along with Skript.  If not, see <http://www.gnu.org/licenses/>.
- * <p>
- * Copyright coffeeRequired nd contributors
- */
-
 package cz.coffee;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
-import cz.coffee.skript.interactiveGui.base.IGUI;
-import cz.coffee.skript.interactiveGui.base.listerens.ListenerGUI;
-import cz.coffee.skript.interactiveGui.events.BukkitEvtOnClick;
+import cz.coffee.api.EventTimerOnce;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -31,6 +10,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
+import java.util.concurrent.CompletableFuture;
 import java.util.logging.Logger;
 
 import static cz.coffee.util.SimpleUtils.color;
@@ -42,7 +22,6 @@ public final class SkGoat extends JavaPlugin {
     private static SkGoat instance;
     private static PluginDescriptionFile pdf;
     private static Logger logger;
-    public static HashMap<String, IGUI> GUI_MAP = new HashMap<>();
     //public static Set<Trigger> OI = new HashSet<>();
 
     public static SkGoat getInstance() {
@@ -115,16 +94,7 @@ public final class SkGoat extends JavaPlugin {
             ex.printStackTrace();
             return;
         }
-
-        //metrics
-        //loadMetrics();
-        // register custom events
-        pm.registerEvents(new BukkitEvtOnClick(), instance);
-        pm.registerEvents(new ListenerGUI(), instance);
-
-
-        console("&aFinished loading");
-    }
+        console("&aFinished loading");}
 
     @Override
     public void onDisable() {

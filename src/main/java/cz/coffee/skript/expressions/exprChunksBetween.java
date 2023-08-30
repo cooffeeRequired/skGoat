@@ -43,6 +43,7 @@ public class exprChunksBetween extends SimpleExpression<Chunk> {
     }
     @Override
     protected Chunk @NotNull [] get(@NotNull Event e) {
+
         Set<Chunk> chunks = new HashSet<>();
         Location l1 = loc1.getSingle(e);
         Location l2 = loc2.getSingle(e);
@@ -83,7 +84,6 @@ public class exprChunksBetween extends SimpleExpression<Chunk> {
     @SuppressWarnings("unchecked")
     @Override
     public boolean init(Expression<?> @NotNull [] exprs, int matchedPattern, @NotNull Kleenean isDelayed, @NotNull ParseResult parseResult) {
-        System.out.println("LOAD");
         loc1 = (Expression<Location>) exprs[0];
         loc2 = (Expression<Location>) exprs[1];
         return true;

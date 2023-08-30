@@ -30,7 +30,7 @@ public class EvtInventoryDrag extends SkriptEvent {
 
     @Override
     public boolean check(@NotNull Event e) {
-        return true;
+        return (e instanceof InventoryDragEvent dragEvent);
     }
 
     @Override

@@ -11,6 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.eclipse.jdt.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
+
 @Since("1.0")
 
 public class EvtInventoryInstantMove extends SkriptEvent {
@@ -30,8 +31,7 @@ public class EvtInventoryInstantMove extends SkriptEvent {
 
     @Override
     public boolean check(@NotNull Event e) {
-        if (e instanceof InventoryClickEvent) {
-            InventoryClickEvent event = ((InventoryClickEvent) e);
+        if (e instanceof InventoryClickEvent event) {
             return event.getAction().equals(InventoryAction.MOVE_TO_OTHER_INVENTORY);
         }
         return false;

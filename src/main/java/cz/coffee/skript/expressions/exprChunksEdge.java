@@ -22,11 +22,12 @@ import java.util.Set;
 
 @Name("Edges of chunk")
 @Description("You can get the block's of edges of the Chunk")
-@Examples("command try:\n" +
-        "    trigger:\n" +
-        "        loop border of player's chunk:\n" +
-        "            send loop-value"
-)
+@Examples({
+        "command get chunk border:",
+        "\ttrigger:",
+        "\t\tloop border of player's chunk:",
+        "\t\t\tloop-value"
+})
 @Since("1.0")
 
 public class exprChunksEdge extends SimpleExpression<Block> {
@@ -36,7 +37,6 @@ public class exprChunksEdge extends SimpleExpression<Block> {
                 "[the] (border|edges) of %chunk% [%player%]"
         );
     }
-
 
     private Expression<Chunk> exprChunk;
     private Expression<Player> exprPlayer;
@@ -49,7 +49,6 @@ public class exprChunksEdge extends SimpleExpression<Block> {
 
         int y = p.getLocation().getBlockY();
 
-
         Set<Block> blocks = new HashSet<>();
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
@@ -59,8 +58,6 @@ public class exprChunksEdge extends SimpleExpression<Block> {
                 }
             }
         }
-
-
         return blocks.toArray(new Block[0]);
     }
 

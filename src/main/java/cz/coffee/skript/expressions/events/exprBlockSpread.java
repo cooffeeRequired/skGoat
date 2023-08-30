@@ -1,6 +1,9 @@
 package cz.coffee.skript.expressions.events;
 
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.Description;
+import ch.njol.skript.doc.Examples;
+import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.lang.Expression;
@@ -13,7 +16,13 @@ import org.bukkit.event.block.BlockSpreadEvent;
 import org.eclipse.jdt.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
+@Name("Source block - (On block spread)")
+@Description("The block from which it spreading")
+@Examples({"on block spread:",
+        "\tsend event-source"
+})
 @Since("1.0")
+
 
 public class exprBlockSpread extends EventValueExpression<Object> {
 

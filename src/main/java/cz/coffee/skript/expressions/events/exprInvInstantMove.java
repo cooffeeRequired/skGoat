@@ -2,6 +2,7 @@ package cz.coffee.skript.expressions.events;
 
 
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.Description;
 import ch.njol.skript.doc.Examples;
 import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
@@ -17,7 +18,10 @@ import org.eclipse.jdt.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
 @Name("Future event inv")
-@Examples("The future inventory")
+@Examples({"on inventory click:",
+        "\tsend future event-inventory"
+})
+@Description("Get inventory to which the item is moved")
 @Since("1.0")
 
 

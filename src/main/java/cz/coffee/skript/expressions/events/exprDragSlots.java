@@ -19,8 +19,11 @@ import java.util.ArrayList;
 import java.util.Set;
 
 
-@Name("Dragged Slots")
-@Examples("The dragged inventory slots")
+@Name("Dragged slots - (On Inventory Drag)")
+@Examples({"on inventory drag:",
+        "\tsend event-slots",
+        "\tsend event-slot"
+})
 @Since("1.0")
 
 public class exprDragSlots extends EventValueExpression<Integer> {
