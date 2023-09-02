@@ -1,4 +1,4 @@
-package cz.coffee.skript.expressions.events;
+package cz.coffee.goat.skript.expressions.events;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
         "\tsend event-source"
 })
 @Since("1.0")
+@SuppressWarnings("unused")
 
 
 public class exprBlockSpread extends EventValueExpression<Object> {

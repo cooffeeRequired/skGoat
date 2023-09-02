@@ -1,4 +1,4 @@
-package cz.coffee.skript.condition;
+package cz.coffee.goat.skript.condition;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
         "\t\t\tcancel event"
 })
 @Since("1.0")
-
+@SuppressWarnings("unused")
 
 public class CondInvClickEvent extends Condition {
 

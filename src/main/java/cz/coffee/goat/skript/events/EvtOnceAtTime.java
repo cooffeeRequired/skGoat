@@ -1,12 +1,12 @@
-package cz.coffee.skript.events;
+package cz.coffee.goat.skript.events;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.util.Time;
-import cz.coffee.SkGoat;
-import cz.coffee.api.EventTimerOnce;
+import cz.coffee.goat.SkGoat;
+import cz.coffee.goat.api.EventTimerOnce;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 import org.eclipse.jdt.annotation.Nullable;
@@ -16,6 +16,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+@SuppressWarnings("unused")
 public class EvtOnceAtTime extends SkriptEvent implements Comparable<EvtOnceAtTime> {
 
     static {

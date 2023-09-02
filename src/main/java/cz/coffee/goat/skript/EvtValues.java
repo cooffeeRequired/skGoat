@@ -1,4 +1,4 @@
-package cz.coffee.skript;
+package cz.coffee.goat.skript;
 
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.registrations.EventValues;
@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 
 @Since("1.0")
-
+@SuppressWarnings("unused")
 public class EvtValues {
     static {
         EventValues.registerEventValue(InventoryDragEvent.class, Inventory.class,

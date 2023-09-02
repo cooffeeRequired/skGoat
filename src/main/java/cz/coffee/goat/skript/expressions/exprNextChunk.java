@@ -1,4 +1,4 @@
-package cz.coffee.skript.expressions;
+package cz.coffee.goat.skript.expressions;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Examples;
@@ -18,24 +18,26 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+@SuppressWarnings("unused")
 
 @Name("Chunks next to chunk at location")
 @Since("1.0")
-@Examples("on player move:\n" +
-        "    execute player command \"chunk\"\n" +
-        "\n" +
-        "command setCH:\n" +
-        "    trigger:\n" +
-        "        set {chunks::*} to chunks next directly attached to player's chunk\n" +
-        "\n" +
-        "\n" +
-        "command chunk:\n" +
-        "    trigger:\n" +
-        "        {chunks::*} contains player's chunk:\n" +
-        "            send \"&acorrect\"\n" +
-        "            send player's chunk\n" +
-        "        else:\n" +
-        "            send \"&cincorrect &f%player's chunk%\""
+@Examples("""
+        on player move:
+            execute player command "chunk"
+
+        command setCH:
+            trigger:
+                set {chunks::*} to chunks next directly attached to player's chunk
+
+
+        command chunk:
+            trigger:
+                {chunks::*} contains player's chunk:
+                    send "&acorrect"
+                    send player's chunk
+                else:
+                    send "&cincorrect &f%player's chunk%\""""
 )
 
 public class exprNextChunk extends SimpleExpression<Chunk> {

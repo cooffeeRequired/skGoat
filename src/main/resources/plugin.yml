@@ -1,6 +1,6 @@
-name: Skgoat
+name: SkGoat
 version: '${version}'
-main: cz.coffee.SkGoat
+main: cz.coffee.goat.SkGoat
 api-version: 1.19
 prefix: skGoat
 depend: [ Skript ]

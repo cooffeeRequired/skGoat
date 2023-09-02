@@ -1,13 +1,8 @@
-package cz.coffee.api;
+package cz.coffee.goat.api;
 
-import cz.coffee.skript.events.EvtOnceAtTime;
 import org.bukkit.event.Event;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
-import org.bukkit.event.Listener;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.EventListener;
 
 /**
  * Copyright coffeeRequired nd contributors
@@ -18,6 +13,7 @@ public class EventTimerOnce extends Event {
 
     private static final HandlerList handlers = new HandlerList();
 
+    @SuppressWarnings("unused")
     public static HandlerList getHandlerList() {
         return handlers;
     }

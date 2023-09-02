@@ -1,4 +1,4 @@
-package cz.coffee.skript.condition;
+package cz.coffee.goat.skript.condition;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -29,7 +29,7 @@ import java.util.Objects;
         "\t\tsend true to event-player"
 })
 @Since("1.0")
-
+@SuppressWarnings("unused")
 public class CondInvDragEvent extends Condition {
 
     static {

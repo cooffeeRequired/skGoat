@@ -1,4 +1,4 @@
-package cz.coffee.skript.expressions.events;
+package cz.coffee.goat.skript.expressions.events;
 
 
 import ch.njol.skript.Skript;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Set;
 
-
+@SuppressWarnings("unused")
 @Name("Dragged slots - (On Inventory Drag)")
 @Examples({"on inventory drag:",
         "\tsend event-slots",

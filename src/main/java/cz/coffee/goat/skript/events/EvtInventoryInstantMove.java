@@ -1,6 +1,8 @@
-package cz.coffee.skript.events;
+package cz.coffee.goat.skript.events;
 
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.Description;
+import ch.njol.skript.doc.Name;
 import ch.njol.skript.doc.Since;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -12,6 +14,8 @@ import org.eclipse.jdt.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
 
+@Name("Instant move")
+@Description("It's detect a instance move action on inventory")
 @Since("1.0")
 
 public class EvtInventoryInstantMove extends SkriptEvent {

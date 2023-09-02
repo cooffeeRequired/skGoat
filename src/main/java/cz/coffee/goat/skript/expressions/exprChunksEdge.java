@@ -1,4 +1,4 @@
-package cz.coffee.skript.expressions;
+package cz.coffee.goat.skript.expressions;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -29,7 +29,7 @@ import java.util.Set;
         "\t\t\tloop-value"
 })
 @Since("1.0")
-
+@SuppressWarnings("unused")
 public class exprChunksEdge extends SimpleExpression<Block> {
 
     static {

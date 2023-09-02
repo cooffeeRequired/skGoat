@@ -1,7 +1,8 @@
-package cz.coffee.util;
+package cz.coffee.goat.util;
 
 import java.util.Random;
 
+@SuppressWarnings("unused")
 public class RandomFlot {
     private double currentValue;
     private final double minValue = 6.0;

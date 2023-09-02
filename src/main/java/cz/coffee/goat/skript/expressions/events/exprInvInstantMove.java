@@ -1,4 +1,4 @@
-package cz.coffee.skript.expressions.events;
+package cz.coffee.goat.skript.expressions.events;
 
 
 import ch.njol.skript.Skript;
@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 @Description("Get inventory to which the item is moved")
 @Since("1.0")
 
-
+@SuppressWarnings("unused")
 public class exprInvInstantMove extends EventValueExpression<Inventory> {
     static {
         Skript.registerExpression(exprInvInstantMove.class, Inventory.class, ExpressionType.SIMPLE,

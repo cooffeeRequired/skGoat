@@ -1,4 +1,4 @@
-package cz.coffee.util;
+package cz.coffee.goat.util;
 
 import org.bukkit.ChatColor;
 

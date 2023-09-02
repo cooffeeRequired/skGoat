@@ -1,20 +1,15 @@
-package cz.coffee;
+package cz.coffee.goat;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
-import cz.coffee.api.EventTimerOnce;
+import cz.coffee.goat.util.SimpleUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.HashMap;
-import java.util.concurrent.CompletableFuture;
 import java.util.logging.Logger;
-
-import static cz.coffee.util.SimpleUtils.color;
-import static cz.coffee.util.SimpleUtils.hex;
 
 public final class SkGoat extends JavaPlugin {
 
@@ -50,26 +45,26 @@ public final class SkGoat extends JavaPlugin {
     // Loggers
     @SuppressWarnings("unused")
     public static void warning(String string) {
-        logger.warning(color("&e" + string));
+        logger.warning(SimpleUtils.color("&e" + string));
     }
 
     // Logging
     public static void info(String string) {
-        logger.info(color(string));
+        logger.info(SimpleUtils.color(string));
     }
 
     @SuppressWarnings("unused")
     public static void debug(Object str) {
-        logger.severe(color("DEBUG! " + "&r" + str));
+        logger.severe(SimpleUtils.color("DEBUG! " + "&r" + str));
     }
 
     public static void severe(String string) {
-        logger.severe(color("&c" + string));
+        logger.severe(SimpleUtils.color("&c" + string));
     }
 
     public static void console(String string) {
-        String prefix = color("&7[" + hex("#6ee1fas#60c0d9k#53a0b9G#458198o#386478a#2a4858t") + "&7]");
-        Bukkit.getServer().getConsoleSender().sendMessage(color(prefix + " " + hex(string)));
+        String prefix = SimpleUtils.color("&7[" + SimpleUtils.hex("#6ee1fas#60c0d9k#53a0b9G#458198o#386478a#2a4858t") + "&7]");
+        Bukkit.getServer().getConsoleSender().sendMessage(SimpleUtils.color(prefix + " " + SimpleUtils.hex(string)));
     }
 
 
@@ -88,10 +83,10 @@ public final class SkGoat extends JavaPlugin {
         }
         SkriptAddon addon = Skript.registerAddon(this);
         try {
-            addon.loadClasses("cz.coffee.skript");
+            addon.loadClasses("cz.coffee.goat.skript");
         } catch (Exception ex) {
             severe("Unable to register " + pdf.getName() + " syntaxes:\n- " + ex.getMessage());
-            ex.printStackTrace();
+            ex.fillInStackTrace();
             return;
         }
         console("&aFinished loading");}

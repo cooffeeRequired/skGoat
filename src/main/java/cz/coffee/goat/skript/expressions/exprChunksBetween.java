@@ -1,4 +1,4 @@
-package cz.coffee.skript.expressions;
+package cz.coffee.goat.skript.expressions;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.doc.Description;
@@ -22,16 +22,17 @@ import java.util.Set;
 
 @Name("All chunks between locations")
 @Description("It's gets the chunks between those locations")
-@Examples("command testchunk:\n" +
-        "    trigger:\n" +
-        "        set {_l2} to player's location\n" +
-        "        add 10 to {_l2}'s x-coord\n" +
-        "        add 10 to {_l2}'s z-coord\n" +
-        "\n" +
-        "        set {a::*} to all chunks between player's location and {_l2}\n" +
-        "        send {a::*} to player")
-@Since("1.0")
+@Examples("""
+        command test-chunk:
+            trigger:
+                set {_l2} to player's location
+                add 10 to {_l2}'s x-coord
+                add 10 to {_l2}'s z-coord
 
+                set {a::*} to all chunks between player's location and {_l2}
+                send {a::*} to player""")
+@Since("1.0")
+@SuppressWarnings("unused")
 public class exprChunksBetween extends SimpleExpression<Chunk> {
 
     private Expression<Location> loc1, loc2;
