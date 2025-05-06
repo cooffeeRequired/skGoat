@@ -2,6 +2,7 @@ package cz.coffee.goat;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
+import cz.coffee.goat.api.CropListener;
 import cz.coffee.goat.util.SimpleUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -33,6 +34,9 @@ public final class SkGoat extends JavaPlugin {
             reason = "Plugin 'Skript' isn't enabled";
             canLoad = false;
         }
+
+        Bukkit.getPluginManager().registerEvents(new CropListener(), this);
+
         if (!canLoad) severe("Couldn't load " + pdf.getName() + ":\n- " + reason);
         return canLoad;
     }

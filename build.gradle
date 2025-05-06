@@ -2,7 +2,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
     id('java')
-    id 'com.gradleup.shadow' version '8.3.5'
+    id("com.gradleup.shadow") version "9.0.0-beta13"
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
@@ -13,7 +13,7 @@ apply plugin: 'java'
 apply plugin: 'com.github.johnrengelman.shadow'
 
 group = 'cz.coffee'
-version = '1.0'
+version = '1.1'
 def testVersion = 'latest'
 
 
@@ -73,7 +73,7 @@ tasks.withType(ShadowJar).configureEach {
     doLast {
         copy {
             from archiveFile.get().asFile
-            into '/home/coffee/mc/plugins'
+            into 'C:\\Users\\Coffee\\Desktop\\mc-developing\\plugins'
             rename { "SkGoat.jar" }
         }
         println "Message: ${styler['green']('new release was out of')} ${styler['yellow']('skGoat')}"
